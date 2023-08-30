@@ -1,8 +1,9 @@
 $font-paragraphs: 'Barlow', sans-serif;
 $font-titles: 'Fraunces', serif;
 
-$soft-red: hsl(7, 99%, 70%);
-$yellow: rgba(249, 212, 0, 0.5);
+$soft-red-tranparent: rgba(254, 120, 102, 0.5);
+$yellow-tranparent: rgba(249, 212, 0, 0.5);
+$yellow: hsl(51, 100%, 49%);
 $dark-saturated-cyan: hsl(167, 40%, 24%);
 $dark-blue: hsl(198, 62%, 26%);
 $dark-moderate-cyan: hsl(168, 34%, 41%);
@@ -25,7 +26,6 @@ html {
 
 body {
   width: 100vw;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,14 +42,14 @@ body {
     .logo {
       position: absolute;
       top: 5%;
-      left: 6%;
+      left: 7%;
       width: 100px;
     }
 
     .mobile-icon-menu {
       position: absolute;
       top: 5%;
-      right: 6%;
+      right: 7%;
       width: 24px;
     }
 
@@ -69,6 +69,63 @@ body {
       top: 54%;
       right: 44%;
       width: 35px;
+    }
+
+    .mobile-menu {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 86%;
+      background-color: $white;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: visible;
+      z-index: 1;
+      display: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 99%;
+        right: 29.5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 30px 30px;
+        border-color: transparent transparent $white transparent;
+        transform: translate(100%, 0);
+        z-index: -1;
+      }
+
+      .inactive {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        font-family: $font-paragraphs;
+        font-size: 1.8rem;
+        color: $dark-grayish-blue;
+        margin-top: 15px;
+
+        li {
+          margin-bottom: 30px;
+        }
+      }
+
+      .contact-button {
+        width: 120px;
+        background-color: $yellow;
+        border-radius: 30px;
+        font-family: $font-titles;
+        font-size: 1.4rem;
+        padding: 16px;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -173,7 +230,7 @@ body {
             transform: translateX(-50%);
             width: 130px;
             height: 10px;
-            background-color: $yellow;
+            background-color: $soft-red-tranparent;
             border-radius: 3px;
             z-index: 1;
           }
@@ -328,8 +385,8 @@ body {
     ul {
       list-style: none;
       display: flex;  
-      justify-content: space-between;
-      padding: 0 30px 0 30px;    
+      justify-content: space-evenly;
+      padding: 0 60px 0 60px;    
       margin-top: 40px;
       font-family: $font-paragraphs;
       font-size: 1.6rem;
@@ -341,7 +398,13 @@ body {
       margin-bottom: 60px;
       display: flex;
       justify-content: space-evenly;
-      padding: 0 60px 0 60px;
+      padding: 0 100px 0 100px;
     }
   }
 }
+
+.inactive {
+  display: none;
+}
+
+@import 'desktop';
