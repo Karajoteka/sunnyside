@@ -16,7 +16,7 @@ $white: hsl(0, 0%, 100%);
 @media screen and (min-width: 555px) {
   body {
     width: 100vw;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 
     header {
       width: 100%;
@@ -85,6 +85,12 @@ $white: hsl(0, 0%, 100%);
           font-family: $font-titles;
           font-size: 1.2rem;
           padding: 14px 0 14px 18px;
+
+          &:hover {
+            cursor: pointer;
+            background-color: hsl(198, 91%, 70%);
+            color: $white;
+          }
         }
       }
     }
@@ -134,6 +140,10 @@ $white: hsl(0, 0%, 100%);
             left: 0;
             margin-left: 20px;
 
+            .learn-more {
+              cursor: pointer;
+            }
+
             .line {
               margin-left: 0;
               top: 50%;
@@ -182,6 +192,10 @@ $white: hsl(0, 0%, 100%);
           .learn-more-container {
             left: 0;
             margin-left: 20px;
+
+            .learn-more {
+              cursor: pointer;
+            }
 
             .line {
               margin-left: 0;
@@ -283,10 +297,31 @@ $white: hsl(0, 0%, 100%);
 
       ul {
         font-size: 1.8rem;
+
+        li:hover {
+          cursor: pointer;
+          color: $white;
+        }
       }
 
       .social-media-container {
         padding: 0 150px 0 150px;
+
+        .social-icon-mobile {
+          width: 25px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .social-icon-hover {
+          width: 25px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
   }
