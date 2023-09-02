@@ -307,7 +307,7 @@ $white: hsl(0, 0%, 100%);
       .social-media-container {
         padding: 0 150px 0 150px;
 
-        .social-icon-mobile {
+        img {
           width: 25px;
 
           &:hover {
@@ -315,8 +315,9 @@ $white: hsl(0, 0%, 100%);
           }
         }
 
-        .social-icon-hover {
+        .hover-icon {
           width: 25px;
+          display: none;
 
           &:hover {
             cursor: pointer;
