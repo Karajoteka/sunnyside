@@ -32,11 +32,17 @@ body {
   flex-direction: column;
 
   header {
+    width: 100%;
     position: relative;
 
-    .header-image {
+    .header-mobile-image {
+      display: block;
       position: relative;
       width: 100%;
+    }
+
+    .header-desktop-image {
+      display: none;
     }
 
     .logo {
@@ -101,10 +107,6 @@ body {
         z-index: -1;
       }
 
-      .inactive {
-        display: none;
-      }
-
       ul {
         list-style: none;
         font-family: $font-paragraphs;
@@ -117,7 +119,7 @@ body {
         }
       }
 
-      .contact-button {
+      .contact-button-mobile-menu {
         width: 120px;
         background-color: $yellow;
         border-radius: 30px;
@@ -127,6 +129,10 @@ body {
         margin-bottom: 20px;
       }
     }
+
+    .desktop-menu {
+      display: none;
+    }
   }
 
   .proposals {
@@ -134,8 +140,12 @@ body {
 
     .transform {
 
-      .transform-image {
+      .transform-mobile-image {
         width: 100%;
+      }
+
+      .transform-desktop-image {
+        display: none;
       }
 
       .transform-description {
@@ -187,8 +197,12 @@ body {
 
     .stand-out {
       
-      .stand-out-image {
+      .stand-out-mobile-image {
         width: 100%;
+      }
+
+      .stand-out-desktop-image {
+        display: none;
       }
 
       .stand-out-description {
@@ -246,9 +260,13 @@ body {
       text-align: center;
       width: 100%;
       
-      .graphic-design-image {
+      .graphic-design-mobile-image {
         position: relative;
         width: 100%;
+      }
+
+      .graphic-design-desktop-image {
+        display: none;
       }
 
       h2 {
@@ -282,9 +300,13 @@ body {
       width: 100%;
       margin-top: -5px;
       
-      .photography-image {
+      .photography-mobile-image {
         position: relative;
         width: 100%;
+      }
+
+      .photography-desktop-image {
+        display: none;
       }
 
       h2 {
@@ -364,10 +386,14 @@ body {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 50%);
 
-    img {
+    .gallery-mobile-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .gallery-desktop-image {
+      display: none;
     }
   }
 
