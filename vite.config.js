@@ -3,4 +3,5 @@ export default {
     outDir: 'dist',
     assetsDir: 'assets',
   },
+  base: './',
 };
